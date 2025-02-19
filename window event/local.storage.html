@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form id="form"><input type="text" id="ip1">
+        <input type="text" id="ip2">
+        <input type="submit">
+    </form>
+    <p id="p1"></p>
+</body>
+ <script>
+    let ip1=document.getElementById("ip1")
+    let ip2=document.getElementById("ip2")
+    let form=document.getElementById("form")
+    obj={"name":"mani","age":20}
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        // localStorage.setItem("Name",ip1.value);
+        // localStorage.setItem("password",ip2.value);/
+        let objjson=JSON.stringify(obj)
+        localStorage.setItem("obj",objjson)
+        let obj1=localStorage.getItem("obj")
+        let convert=JSON.parse(obj1)
+        console.log(typeof(convert));
+        console.log(typeof("obj"));
+        // let input=localStorage.getItem("Name")
+        // let p1=document.getElementById("p1")
+        // p1.innerHTML=input
+        // alert(document.cookie);
+        
+    })
+    
+ </script>
+</html>

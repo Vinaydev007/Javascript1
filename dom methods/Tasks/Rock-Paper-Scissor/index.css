@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.heading{
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.choices{
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    gap: 2px;
+    height: 125px;
+}
+.choice{
+    background-color: aqua;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   font-size: 2rem; 
+   margin: 2px;
+}
+.choice:hover{
+    background-color: brown;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="fnc(event)">
+        <input type="text" id="ip1">
+        <input type="text" id="ip2">
+        <input type="submit">
+    </form>
+    <p></p>
+    <p></p>
+    <script>
+        let ip1=document.getElementById("ip1")
+        let ip2=document.getElementById("ip2")
+            let p1=document.getElementsByTagName("p")
+        function fnc(event){
+            event.preventDefault();
+            // num=ip1.value
+            // if(ip1.value%2==0){
+            //     p1[0].innerHTML=`${ip1.value}it is even`
+            // }
+            // else{
+            //     p1[0].innerHTML=`${ip1.value}it is odd`
+            // }
+            value=1
+            for(i=1;i<=ip1.value;i++)
+            {
+              value=value*i
+            }
+            p1[0].innerHTML=value
+        }
+    </script>
+</body>
+</html>

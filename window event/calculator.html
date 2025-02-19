@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+
+<body>
+    <input type="text" id="display">
+    <button id="btn" onclick="cal()">ans</button>
+    <button id="bt1" onclick="addclick(0)">0</button>
+    <button id="bt2" onclick="addclick(1)">1</button>
+    <button id="bt3"onclick="addclick(2)">2</button>
+    <button id="bt4"onclick="addclick(3)">3</button>
+    <button id="bt5"onclick="addclick(4)">4</button>
+    <button id="bt6"onclick="addclick(5)">5</button>
+    <button id="bt7"onclick="addclick(6)">6</button>
+    <button id="bt8"onclick="addclick(7)">7</button>
+    <button id="bt9"onclick="addclick(8)">8</button>
+    <button id="bt10"onclick="addclick(9)">9</button>
+    <button id="btn11" onclick="addclick('+')">+</button>
+    <button id="btn12" onclick="addclick('-')">-</button>
+    <button id="btn13" onclick="addclcik('*')">*</button>
+    <button id="btn14" onclick="addclick('/')">/</button>
+    <button onclick="clear1('clear')">clear</button>
+    <button onclick="del('del')">del</button>
+    <p id="p1"></p>
+</body>
+<script>
+    let display = document.getElementById("display");
+    function addclick(x){
+        display.value+=x
+    }
+    function cal() {
+        let cal = eval(display.value)
+        // let p1 = document.getElementById("p1")
+        display.value=cal
+    }
+    function clear1(){
+        display.value=" "
+    }
+    function del(){
+       display.value=display.value.slice(0,-1)
+    }
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="id">Enter Item ID:</label>
+    <input type="text" id="id">
+    <button id="btn">Submit</button>
+    
+    <div id="output" style="border: solid 2px; width: 400px; height: 500px; overflow-y: scroll;"></div>
+    
+    <script>
+        let arr = [
+            {"id": 1, "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops", "price": 109.95},
+            {"id": 2, "title": "Mens Casual Premium Slim Fit T-Shirts", "price": 22.3},
+            {"id": 3, "title": "Mens Cotton Jacket", "price": 55.99},
+            {"id": 4, "title": "Mens Casual Slim Fit", "price": 15.99},
+            {"id": 5, "title": "John Hardy Women's Legends Naga Bracelet", "price": 695},
+            // Other items...
+        ];
+
+        let btn = document.getElementById("btn");
+        let div = document.getElementById("output");
+        let input = document.getElementById("id");
+
+        btn.addEventListener("click", () => {
+            // Clear the div content before displaying new results
+            div.innerHTML = '';
+            
+
+            let searchId = parseInt(input.value);
+            let foundItem = arr.find(item => item.id === searchId);
+
+            if (foundItem) {
+                div.innerHTML = `
+                    <p><strong>Title:</strong> ${foundItem.title}</p>
+                    <p><strong>Price:</strong> $${foundItem.price}</p>
+                `;
+            } else {
+                div.innerHTML = '<p>No item found with that ID.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

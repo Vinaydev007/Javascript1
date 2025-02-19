@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let pr1=new Promise((res,rej)=>{
+        //     setTimeout(()=>{
+        //         if(!true){
+        //             res("problem1 resolved")
+        //         }
+        //         else{
+        //             rej("problem1 rejected")
+        //         }
+        //     },1500)
+        // })
+        // // pr1.then((a)=>{
+        // //     console.log(a)
+        // // }).catch((b)=>{
+        // //     console.log(b)
+        // // })
+        // let pr2=new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         if(!true){
+        //             resolve("problem2 resolved")
+        //         }
+        //         else{
+        //             reject("problem2 rejected")
+        //         }
+        //     },500)
+        // })
+        // // pr2.then((c)=>{
+        // //     console.log(c)
+        // // }).catch((d)=>{
+        // //     console.log(d)
+        // // })
+
+        // pr1.then((a)=>{
+        //     console.log(a)
+        //     return pr2;
+        // }).then((b)=>{
+        //     console.log(b);
+        // }).catch((e)=>{
+        //     console.log(e)
+        // }).finally(()=>{
+        //     console.log("all blocks got executed")
+        // })
+
+
+        // function  signup(){
+        //     let pr1=new Promise((res,rej)=>{
+        //         setTimeout(()=>{
+        //         res("sign complte")
+        //     },3000)
+        //     })
+        //     return pr1;
+        // } 
+
+        // function login(){
+        //     let pr2=new Promise((res,rej)=>{
+        //         setTimeout(()=>{
+        //             res("login is successful")
+        //         },2500)
+        //     })
+        //     return pr2
+        // }
+        // function home_page(){
+        //     let pr3=new Promise((res,rej)=>{
+        //         setTimeout(()=>{
+        //             res("Back to home page")
+        //         },1000)
+        //     })
+        //     return pr3
+        // }
+        // signup().then((a)=>{console.log(a);return login()}).then((b)=>{console.log(b);return home_page()}).then((c)=>{console.log(c)});
+        // // demo().then((p)=>{
+        // //     console.log(p)
+        // // });
+
+        // let url="https://fakestoreapi.com/products"
+        // fetch(url);
+        // fetch.then((e)=>{
+        //  console.log(e)
+        // })
+        let url = "https://fakestoreapi.com/products";
+
+fetch(url)
+  .then((response) => {
+    // Check if the request was successful
+    if (response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    // Convert the response to JSON
+    return response.json();
+  })
+  .then((data) => {
+    // Now you have the actual data
+    console.log(data);
+  })
+  .catch((error) => {
+    // Catch and log any errors
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+    </script>
+</body>
+</html>

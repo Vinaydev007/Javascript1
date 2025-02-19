@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input id="inp1" type="text">
+        <input id="inp2" type="text">
+        <input type="submit">
+    </form>
+    <script>
+        let form=document.getElementById("form")
+        
+        form.addEventListener("submit",()=>{
+            inp1=document.getElementById("inp1")
+            inp2=document.getElementById("inp2")
+            data={"Name":inp1.value,"city":inp2.value};
+            localStorage.setItem("userdetails",JSON.stringify(data))
+            // localStorage.setItem("Name",inp1.value);
+            // localStorage.setItem("pass",inp2.value);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let pr1=new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         resolve("promise1 resolved")
+        //     },5000)
+        // })
+        //  console.log(pr1)
+        // let url='https://fakestoreapi.com/products/1'
+        // let promise=fetch(url);
+        // promise.then((e)=>{
+        //   return e.json()
+        // }).then((response)=>{
+        //     for(i in response){
+        //         console.log(response.i)
+        //     }
+        // })navigator.geolocation.getCurrentPosition(position => {
+            navigator.geolocation.getCurrentPosition(position => {
+  console.log('Latitude:', position.coords.latitude);
+  console.log('Longitude:', position.coords.longitude);
+});
+
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // async function demo() {
+
+        // }
+        // async function handledemo() {
+        //     await demo()
+        // }
+        // handledemo()
+
+
+
+
+        // An asynchronous function that returns a resolved promise
+        const simpleAsyncFunction = async () => {
+            return "Hello, World!";
+        };
+
+        // Another async function to use await
+        const displayMessage = async () => {
+            const message = await simpleAsyncFunction();
+            console.log(message);
+        };
+
+        // Call the displayMessage function
+        displayMessage();
+
+
+
+    </script>
+</body>
+
+</html>

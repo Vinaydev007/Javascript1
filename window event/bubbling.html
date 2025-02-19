@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+          height: 50vh;
+          width:50vw;
+          background-color: brown;
+        }
+        #child{
+          height: 50%;
+          width:50%;
+          background-color: rgb(54, 165, 42);
+        }
+        #gchild{
+          height: 50%;
+          width:50%;
+          background-color: rgb(42, 52, 165);
+        }
+        #ggchild{
+          height: 50%;
+          width:50%;
+          background-color: rgb(19, 11, 11);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="child">
+            <div id="gchild">
+                <div id="ggchild"></div>
+            </div>
+        </div>
+    </div>
+<script>
+    let parent=document.getElementById("parent")
+    let child=document.getElementById("child")
+    let gchild=document.getElementById("gchild")
+    let ggchild=document.getElementById("ggchild")
+parent.addEventListener("click",()=>{
+    console.log("selected parent")
+})
+child.addEventListener("click",()=>{
+    console.log("selected child")
+})
+gchild.addEventListener("click",()=>{
+    console.log("selected gchild")
+},true)
+ggchild.addEventListener("click",(e)=>{
+    e.stopImmediatePropagation()
+    console.log("selected ggchild")
+})
+</script>
+
+</body>
+
+</html>
